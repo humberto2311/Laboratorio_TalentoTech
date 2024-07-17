@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Persona {
+        constructor(nombre, edad) {
+          this.nombre = nombre;
+          this.edad = edad;
+        }
+        presentarse() {
+          return `Hola, me llamo ${this.nombre} y tengo ${this.edad} años.`;
+        }
+
+        init(otraPersona) {
+          console.log(this.presentarse());
+          console.log(otraPersona.presentarse());
+          console.log(`${this.nombre}: ¿Cómo estás, ${otraPersona.nombre}?`);
+          console.log(`${otraPersona.nombre}: ¡Estoy bien, gracias! ¿Y tú?`);
+        }
+      }
+      let nombreUsuario = prompt("¿Cuál es tu nombre?");
+      let edadUsuario = prompt("¿Cuántos años tienes?");
+      let personaUsuario = new Persona(nombreUsuario, parseInt(edadUsuario));
+
+     
+      let persona1 = new Persona("Humberto", 30);
+
+      persona1.init(personaUsuario);
+    </script>
+  </body>
+</html>

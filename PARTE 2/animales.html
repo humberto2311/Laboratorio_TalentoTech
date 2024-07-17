@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <h1>Resultados de los Animales</h1>
+
+    <h2>Perro</h2>
+    <p><strong>Hablar:</strong> <span id="perroHablar"></span></p>
+    <p><strong>Moverse:</strong> <span id="perroMoverse"></span></p>
+
+    <h2>Gato</h2>
+    <p><strong>Hablar:</strong> <span id="gatoHablar"></span></p>
+    <p><strong>Moverse:</strong> <span id="gatoMoverse"></span></p>
+  </head>
+  <body>
+    <script>
+      class animal {
+        constructor(nombre, edad) {
+          this.nombre = nombre;
+          this.edad = edad;
+        }
+
+        hablar() {}
+        moverse() {}
+      }
+      class perro extends animal {
+        hablar() {
+          return "guau";
+        }
+        moverse() {
+          return "El perro está corriendo";
+        }
+      }
+      class gato extends animal {
+        hablar() {
+          return "miu";
+        }
+        moverse() {
+          return "El gato está caminando sigilosamente";
+        }
+      }
+      function mostrarResultados() {
+        const perro1 = new perro("Rex", 5);
+        const gato1 = new gato("Miau", 3);
+
+        document.getElementById("perroHablar").innerText = perro1.hablar();
+        document.getElementById("perroMoverse").innerText = perro1.moverse();
+
+        document.getElementById("gatoHablar").innerText = gato1.hablar();
+        document.getElementById("gatoMoverse").innerText = gato1.moverse();
+      }
+
+      window.onload = mostrarResultados;
+    </script>
+  </body>
+</html>

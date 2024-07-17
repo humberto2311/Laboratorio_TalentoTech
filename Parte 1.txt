@@ -1,0 +1,39 @@
+1.Definición y principios POO:
+
+1.1 Descripción que es la POO:
+	Es un paradigma de programación que se organiza alrededor de datos u objetos, estas a su vez hacen parte de una instancia de una clase. Por otro lado este tipo de programación debe 	cumplir con normas.
+
+1.2 Principios fundamentales:
+
+	*Encapsulamiento: Este se encarga de hacer que una clase y la implementación de sus objetos sean ocultos. En otras palabras es ocultar los detalles internos del objeto, su acceso 	se permite a través de métodos públicos definidos en la clase.
+
+	*Herencia: Este concepto se encarga de la comunicación entre clases que para evitar la sobreescritura se comparten tanto atributos como de métodos, cabe resaltar que esta herencia 	se da de una "SuperClase" o clase padre a "Subclases" clases hijos y no viceversa. Por consecuente esto facilita la reutilización de código y la creación de jerarquías de clase
+
+	*Polimorfismo: Permite que los objetos de diferentes clases de traten como una clase común. Es decir, un solo método puede tener diferentes implementaciones basadas en el objeto 	que los llama.
+
+	*Abstracción: Permite que los objetos puedan interactuar sin necesidad de conocer los detalles del funcionamiento.
+
+
+1.3
+
+Clase Animal
+    Propiedades:
+        Nombre : string
+        Edad : número
+    
+    Métodos:
+        Método abstracto Hablar()
+
+Clase Perro hereda de Animal
+    Métodos:
+        Hablar():
+            Imprimir "Guau"
+
+Clase Gato hereda de Animal
+    Métodos:
+        Hablar():
+            Imprimir "Miau"
+
+
+
+    

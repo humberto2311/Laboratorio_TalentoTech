@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class vehiculo {
+        constructor(marca, modelo, anio) {
+          this.marca = marca;
+          this.modelo = modelo;
+          this.anio = anio;
+        }
+
+        detalles() {
+          console.log(
+            `Los detalles de vehiculo son los siguientes Marca: ${this.marca} \n Modelo: ${this.modelo} \n Año:${this.anio}`
+          );
+        }
+      }
+      let vehiculo1 = new vehiculo("Mercedes-Benz", "C W204", 2014);
+      let vehiculo2 = new vehiculo("Audi", "A6", 2005);
+      vehiculo1.detalles();
+      vehiculo2.detalles();
+    </script>
+  </body>
+</html>

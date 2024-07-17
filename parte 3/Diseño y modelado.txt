@@ -1,0 +1,17 @@
+EL diseño y modelado en la programación es fundamental para crear software
+flexible y facil de mantener.
+
+En POO es importante los objetos y su manejo; 
+Las clases definen la estructura y el comportamiento de estos objetos y es 
+debido a esto la importancia de una estrutura fisica que ayude a organizar 
+las estrutura de objetos como se desea. Por consiguiente enumerare algunos beneficios
+que nos puede proveer un diseño UML.
+
+1. Nos permite identificar como organizar el codigo para no sobrescribir clases permitiendo asi:
+    *Herencia
+    *Polimorfismo
+    *Modularidad: Permite dividir un programa grande en piezas más pequeñas 
+                  y manejables (clases), lo que facilita la comprensión y el desarrollo del software.
+    *Claridad y Legibilidad
+    *Escalabilidad: Un buen diseño permite que el software se adapte fácilmente a nuevas necesidades o requisitos sin necesidad de reescribir grandes partes del código.
+
