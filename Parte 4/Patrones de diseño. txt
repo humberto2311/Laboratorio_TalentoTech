@@ -1,0 +1,18 @@
+Son soluciones reutilizables y comprobadas a un problema
+comun en la programación orientada a objeto.
+
+*Singleton:
+    Garantiza que una clase solo tenga una instancia y proporciona un punto de acceso global
+     a esa instancia.Ideal para situaciones donde se necesita exactamente una instancia de una clase,
+     como en el manejo de conexiones a bases de datos o en gestores de configuración.
+
+*Factory Method:
+    Define una interfaz para crear objetos, pero permite que las subclases alteren el tipo de objetos 
+    que se crearán.Útil cuando una clase no puede anticipar el tipo de objetos que debe crear o cuando
+     una clase quiere delegar la responsabilidad de creación a sus subclases. 
+
+Observer:
+    Define una relación de dependencia uno-a-muchos entre objetos de manera que cuando un objeto cambie su estado,
+    todos sus dependientes sean notificados y actualizados automáticamente.Comúnmente utilizado en sistemas de eventos, 
+    sistemas de notificación y en la implementación de interfaces de usuario para que los cambios en el modelo se reflejen 
+    automáticamente en la vista.

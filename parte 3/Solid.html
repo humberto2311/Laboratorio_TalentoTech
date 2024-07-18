@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+class ISalaryCalculator {
+    calculateSalary() {
+        throw new Error('This method should be overridden');
+    }
+}
+
+
+class Empleado {
+    constructor(name, salaryCalculator) {
+        this.name = name;
+        this.salaryCalculator = salaryCalculator;
+    }
+
+    getSalary() {
+        return this.salaryCalculator.calculateSalary();
+    }
+}
+
+
+class EmpleadoTiempoCompleto extends Empleado {
+    constructor(name, salaryCalculator, annualSalary) {
+        super(name, salaryCalculator);
+        this.annualSalary = annualSalary;
+    }
+}
+
+class EmpleadoMedioTiempo extends Empleado {
+    constructor(name, salaryCalculator, hourlyRate, hoursWorked) {
+        super(name, salaryCalculator);
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
+    }
+}
+
+
+class FullTimeSalaryCalculator extends ISalaryCalculator {
+    constructor(annualSalary) {
+        super();
+        this.annualSalary = annualSalary;
+    }
+
+    calculateSalary() {
+        return this.annualSalary / 12; // Ejemplo de cálculo mensual
+    }
+}
+
+class PartTimeSalaryCalculator extends ISalaryCalculator {
+    constructor(hourlyRate, hoursWorked) {
+        super();
+        this.hourlyRate = hourlyRate;
+        this.hoursWorked = hoursWorked;
+    }
+
+    calculateSalary() {
+        return this.hourlyRate * this.hoursWorked;
+    }
+}
+
+
+class ReportGenerator {
+    static generateReport(employee) {
+        console.log(`Empleado: ${employee.name}, Salario: ${employee.getSalary()}`);
+    }
+}
+
+
+const fullTimeCalculator = new FullTimeSalaryCalculator(60000);
+const partTimeCalculator = new PartTimeSalaryCalculator(20, 80);
+
+const empleado1 = new EmpleadoTiempoCompleto('Juan', fullTimeCalculator, 60000);
+const empleado2 = new EmpleadoMedioTiempo('Pedro', partTimeCalculator, 20, 80);
+
+ReportGenerator.generateReport(empleado1);
+ReportGenerator.generateReport(empleado2);
+
+    </script>
+</body>
+</html>

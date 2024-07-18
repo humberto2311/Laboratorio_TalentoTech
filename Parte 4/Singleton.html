@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Singleton {
+    constructor() {
+        if (Singleton.instance) {
+            return Singleton.instance;
+        }
+        this.data = "Singleton Instance Data";
+        Singleton.instance = this;
+    }
+
+    getData() {
+        return this.data;
+    }
+
+    setData(newData) {
+        this.data = newData;
+    }
+}
+
+const singleton1 = new Singleton();
+console.log(singleton1.getData()); 
+
+const singleton2 = new Singleton();
+singleton2.setData("New Singleton Data");
+
+console.log(singleton1.getData()); 
+console.log(singleton1 === singleton2); 
+
+
+    </script>
+</body>
+</html>
